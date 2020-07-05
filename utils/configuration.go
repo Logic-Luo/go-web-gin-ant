@@ -11,5 +11,4 @@ func init() {
 		panic("init db error")
 	}
 	// 关闭数据库
-	defer closeDB()
 }

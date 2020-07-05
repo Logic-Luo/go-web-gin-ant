@@ -1,6 +1,7 @@
 package utils
 
 import (
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"log"
 )
@@ -18,6 +19,7 @@ func InitDB() error {
 	db, err := gorm.Open("mysql",
 		"root:admin@tcp(127.0.0.1:32768)/gorm_test?charset=utf8mb4&parseTime=True&loc=Local")
 	rootDB = db
+	log.Printf("db init success")
 	return err
 }
 
